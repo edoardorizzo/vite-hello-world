@@ -1,17 +1,19 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
+<script>
+export default {
+  data() {
+    return {
+      count: 0,
+      hello: 'Hello World'
+    }
+  }
+}
 </script>
 
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
+  <h1> {{ hello }}</h1>
+  <h2> Click counter </h2>
+  <button @click="count++"> You have clicked {{ count }} times</button>
+  <button @click="count = 0"> Reset</button>
 </template>
 
 <style scoped>
